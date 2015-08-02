@@ -24,17 +24,17 @@
         <!--script src="//code.jquery.com/jquery-1.10.2.js"></script-->
         <script src="jquery-ui/jquery-ui.js"></script>
         <script>
-            $(function() {
+            $(function() {/*
                 $('.droppable').droppable({
                     
-                });
+                });*/
                 $('.droppable').sortable({
                     connectWith: '.droppable',
                     items: 'card',
                     handle: 'handle',
                     tolerance: 'pointer',
-                    /*revert: 'invalid',*/
-                    delay: 150,
+                    revert: 'invalid',
+                    /*delay: 150,*/
                     distance: 20, // определяет расстояние, на которое пользователь должен перетащить элемент из его начальной позиции, прежде чем он действительно переместится
                     cursor: 'move',
                     cursorAt: { top: 0 },
