@@ -1,0 +1,320 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+main {
+    padding: 64px;
+    background: url('../img/background.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+icon {
+    margin: 0;
+}
+
+button {
+    transition: all 0.5s ease-in;
+}
+
+@keyframes create {
+    from {
+        height: 0;
+    }
+    to {
+        height: 50px;
+    }
+}
+
+container {
+    display: block;
+    padding: 24px 0;
+    width: 300px;
+    background-color: rgba(255,255,255, 0.50);
+}
+
+card {
+    display: block;
+    position: relative;
+    margin-bottom: 8px;
+    width: 300px;
+    background-color: #ebeef0;
+    border-radius: 2px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid rgba(0,0,0, 0.20);
+    box-shadow: -3px 3px 15px -3px rgba(0,0,0, 0.20);
+    font-size: 12px;
+    color: #5f7c8a;/*
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;*/
+    -webkit-user-select: none;/*
+    -webkit-animation: create 0.2s ease-in-out;*/
+} card:hover {
+    
+}
+
+card handle {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: calc(100% - 50px);
+}
+
+card card {
+    margin-top: 0;
+    margin-left: 16px;
+} card > card:last-of-type {
+    margin-bottom: 24px;
+}
+
+card.accent {
+    background-color: azure;
+}
+
+card.new {
+    padding: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+card.minimized {
+    width: 50px;
+}
+
+card.drag {
+    
+}
+
+card input {
+    cursor: default;
+    padding-left: 16px;
+    height: 50px;
+    width: calc(100% - 50px);
+    background-color: transparent;
+    border: none;
+    transition: all 0.2s ease-in;
+    -webkit-user-select: none;
+}
+
+card.minimized input {
+    margin: 0;
+    padding: 0;
+}
+
+card button {
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    border: none;
+} card button:hover {
+    color: #5f7c8a;
+}
+
+card.minimized button.add {
+    transform: scale(0.9) rotate(45deg);
+}
+
+card:not(.minimized) button.add {
+    transform: scale(1) rotate(0);
+}
+
+card button.close {
+    opacity: 0;
+}
+
+card input:hover + button.close {
+    opacity: 1;
+}
+
+button.close:hover {
+    opacity: 1;
+}
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
