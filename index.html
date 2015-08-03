@@ -17,34 +17,10 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script src="http://code.angularjs.org/1.1.4/angular.min.js"></script>
+        <!--script src="http://code.angularjs.org/1.1.4/angular.min.js"></script-->
 
         <!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script-->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <!--script src="//code.jquery.com/jquery-1.10.2.js"></script-->
-        <script src="jquery-ui/jquery-ui.js"></script>
-        <script>
-            $(function() {/*
-                $('.droppable').droppable({
-                    
-                });*/
-                $('.droppable').sortable({
-                    connectWith: '.droppable',
-                    items: 'card',
-                    handle: 'handle',
-                    tolerance: 'pointer',
-                    revert: 'invalid',
-                    /*delay: 150,*/
-                    distance: 20, // определяет расстояние, на которое пользователь должен перетащить элемент из его начальной позиции, прежде чем он действительно переместится
-                    cursor: 'move',
-                    cursorAt: { top: 0 },
-                    sort: function() {
-                        // gets added unintentionally by droppable interacting with sortable
-                        // using connectWithSortable fixes this, but doesn't allow you to customize active/hoverClass options
-                    }
-                });
-            });
-        </script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -103,5 +79,6 @@
         <script src="js/main.js"></script>
         <script src="js/mg.js"></script>
         <script src="js/animation.js"></script>
+        <script src="js/dragndrop.js"></script>
     </body>
 </html>

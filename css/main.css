@@ -122,8 +122,10 @@ card handle {
 card card {
     margin-top: 0;
     margin-left: 16px;
+} card > card:first-of-type {
+    margin-top: -8px;
 } card > card:last-of-type {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 card.accent {
@@ -142,8 +144,14 @@ card.minimized {
     width: 50px;
 }
 
-card.drag {
-    
+card.placeholder {
+    opacity: 0;
+} card.placeholder handle {
+    display: none;
+}
+
+card.floating {
+    position: absolute;
 }
 
 card input {
