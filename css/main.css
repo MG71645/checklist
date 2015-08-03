@@ -58,7 +58,7 @@ textarea {
    ========================================================================== */
 
 main {
-    padding: 64px;
+    padding: 0;
     background: url('../img/background.jpg') center center no-repeat;
     background-size: cover;
 }
@@ -133,11 +133,8 @@ card.accent {
 }
 
 card.new {
+    margin-left: 48px;
     padding: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
 }
 
 card.minimized {
@@ -179,24 +176,53 @@ card button {
     color: #5f7c8a;
 }
 
-card.minimized button.add {
-    transform: scale(0.9) rotate(45deg);
+card.scaled {
+    margin: 0;
+    padding-top: 104px;
+    padding-left: 48px;
+    padding-bottom: 8px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
-card:not(.minimized) button.add {
-    transform: scale(1) rotate(0);
+card.scaled > input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ebeef0;
+}
+
+card.scaled > card {
+    margin-left: 0;
+} card.scaled > card:last-of-type {
+    margin-bottom: 0;
 }
 
 card button.close {
     opacity: 0;
-}
-
-card input:hover + button.close {
+} button.close:hover {
+    opacity: 1;
+} card input:hover + button.close {
     opacity: 1;
 }
 
-button.close:hover {
+card.minimized button.close {
     opacity: 1;
+}
+
+card.minimized button.close icon {
+    transform: scale(0.9) rotate(-45deg);
+}
+
+card.scaled > button.close {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ebeef0;
+    border-radius: 0;
 }
 
 
