@@ -106,14 +106,6 @@ card {
     -webkit-user-select: none;
 } card:hover {
     
-} card:before {
-    display: block;
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    z-index: 10;
-    height: 10px;
-    width: 100%;
 }
 
 card handle {
@@ -132,6 +124,16 @@ card card {
     margin-top: -8px;
 } card > card:last-of-type {
     margin-bottom: 16px;
+} card > card:before {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    z-index: 10;
+    height: 10px;
+    width: 100%;
+} card > card:first-of-type:before {
+    height: 44px;
 }
 
 card.accent {
