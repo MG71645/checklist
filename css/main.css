@@ -106,8 +106,14 @@ card {
     -webkit-user-select: none;
 } card:hover {
     
-} card.ui-sortable-placeholder {
-    -webkit-animation: create 0.2s ease-in-out;
+} card:before {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    z-index: 10;
+    height: 10px;
+    width: 100%;
 }
 
 card handle {

@@ -30,10 +30,15 @@ $(document).ready( function() {
         if ( holding == false ) {
             return;
         } else if ( holding == true ) {
-            console.log('entering', this);
+            console.log('entering', this, 'at', e.pageY);
+            console.log($(this).offset().top, 'sdlkfj');
             if ( $(this).hasClass('placeholder') == false && $(this).hasClass('new') == false && $(this).children().hasClass('placeholder') == false && $(this).parents().hasClass('placeholder') == false ) {
-                $('.placeholder').removeClass('current')/*.clone()*/.appendTo(this).addClass('current');
-                $('.placeholder:not(.current)').remove();
+                if ( ($(this).offset().top - e.pageY) < 0 ) {
+                    $('.placeholder')/*.removeClass('current')*/.appendTo(this).addClass('current');
+                } else {
+                    $('.placeholder')/*.removeClass('current')*/.insertBefore(this).addClass('current');
+                }
+                /*$('.placeholder:not(.current)').remove();*/
             }
         }
     });
