@@ -30,15 +30,18 @@ $(document).ready( function() {
         if ( holding == false ) {
             return;
         } else if ( holding == true ) {
-            console.log('entering', this, 'at', e.pageY);
-            console.log($(this).offset().top, 'sdlkfj');
+            console.log('entered', this, 'at', e.pageY);
+            console.log($(this).offset().top, $(this).height(), 'sdlkfj');
             if ( $(this).hasClass('placeholder') == false && $(this).hasClass('new') == false && $(this).children().hasClass('placeholder') == false && $(this).parents().hasClass('placeholder') == false ) {
-                if ( ($(this).offset().top - e.pageY) < 0 ) {
-                    $('.placeholder')/*.removeClass('current')*/.appendTo(this).addClass('current');
+                if ( ($(this).offset().top + $(this).height() - e.pageY) > 0 ) {
+                    if ( ($(this).offset().top - e.pageY) > -44 ) {
+                        $('.placeholder').insertAfter($(this).children('handle'));
+                    } else {
+                        $('.placeholder').appendTo(this);
+                    }
                 } else {
-                    $('.placeholder')/*.removeClass('current')*/.insertBefore(this).addClass('current');
+                    $('.placeholder').insertAfter(this);
                 }
-                /*$('.placeholder:not(.current)').remove();*/
             }
         }
     });

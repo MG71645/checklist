@@ -124,16 +124,17 @@ card card {
     margin-top: -8px;
 } card > card:last-of-type {
     margin-bottom: 16px;
-} card > card:before {
+} card > card:after {
     display: block;
     content: '';
     position: absolute;
-    bottom: 100%;
+    top: 100%;
+    left: -16px;
     z-index: 10;
-    height: 10px;
+    height: 10px; /*because of borders*/
     width: 100%;
-} card > card:first-of-type:before {
-    height: 44px;
+} card > card:last-of-type:after {
+    height: 18px; /*because of borders*/
 }
 
 card.accent {
